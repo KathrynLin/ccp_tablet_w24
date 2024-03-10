@@ -1,0 +1,680 @@
+body{
+    font-family: Courier, arial, sans-serif;
+    background-color: rgb(237,210,211);
+    color: rgb(42,104,104);
+}
+
+header{
+    font-family: Courier, arial, sans-serif;
+    background-color: rgb(13, 114, 92);
+    color: rgb(250, 237, 178);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* Skip to Main Content */
+
+a.skip {
+    position: absolute;
+    left: -10000px;
+    padding: 14px 16px;
+    overflow: hidden;
+}
+
+.skip:hover {
+    text-decoration: underline;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+/* Navigation */
+
+nav ul {
+    display: grid;
+    background: rgb(8, 104, 83);
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    height: auto; 
+}
+
+nav ul li {
+    text-align: center; 
+    width: 100%; 
+    font-weight: 700;
+    /* font-size: 1.1rem; */
+    float: left;
+}
+
+nav ul li a {
+    text-align: center;
+    display: block;
+    padding: 20px 16px; 
+    font-size: 1.5rem; 
+    text-decoration: none;
+}
+
+@media screen and (min-width: 750px) {
+        
+    nav ul{
+        height: 80%;
+        margin: 10px;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    nav ul li{
+        text-align: left;
+    }
+
+    nav ul li a{
+        padding: 14px 16px;
+    }
+
+}
+
+
+nav ul li a:hover {
+    background-color: rgb(250, 237, 178);
+    color: rgb(5, 57, 45);
+    border-radius: 10px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+nav .active a {
+    background-color: rgb(6, 70, 56); 
+    border-radius: 10px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+    
+
+
+
+/* Main Content */
+
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+main h1 {
+    border: 5px dotted #4a5759;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+main p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+h2{
+    font-family: "Snell Roundhand", Courier, monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px;
+    padding: 20px;
+    border-bottom: 3px solid rgb(8, 104, 83);
+}
+
+.index-p{
+    font-size: 1.5rem;
+    line-height: 38px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 80px;
+    padding: 10px;
+    margin-bottom: 600px;
+}
+
+img{
+    height: 250px;
+    width: 500px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 5px solid rgb(8, 104, 83);
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Snell Roundhand", Courier, monospace;
+    margin: 0;
+}
+
+video{
+    height: 400px;
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid rgb(8, 104, 83);
+}
+
+/* footer */
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(6, 70, 56);
+    color: rgb(250, 237, 178);
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* grid for pet page */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+    padding: 10%;
+    margin-bottom: 30%;
+    justify-content: space-around;
+}
+
+.para1 {
+    grid-column: 1 / span 2;
+}
+
+.para2 {
+    grid-column: 1 / span 2;
+}
+
+.para1 p, .para2 p {
+    font-size: 1em;
+}
+
+.main-h2 {
+    grid-column: 1 / -1;
+}
+.main-img {
+    grid-column: 1 / span 1;
+    height: 100%;
+    width: auto;
+    
+}
+
+.main-ul {
+    grid-column: 2 / span 1;
+}
+.main-ul {
+
+    border: 5px dotted #000000;
+    display: inline-block;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+    background-color: #84a59d;
+}
+
+.main-ul h3 {
+    color: #4a4a4a; 
+    font-size: 1.6em; 
+    text-align: center; 
+    padding-top: 10%;
+}
+.main-ul ul {
+    list-style-type: circle; 
+    padding: 15%;
+    text-align: left;
+}
+
+.main-ul ul li {
+    color: #333333; 
+    line-height: 1.6; 
+}
+
+.main-h3 {
+    grid-column: 1 / -1;
+}
+
+@media screen and (min-width: 750px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 15% 15% 15% 15% 15% 15%;
+        grid-gap: 10px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    .grid-container > div {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    .main-img {
+        grid-area: 2/1/span 2/span 2;
+    }
+    .main-img img {
+        height: 100%;
+        width: 80%;
+    }
+    .para1 {
+       grid-area: 2/5/span 2/span 2; 
+    }
+    .para1 p{
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    .para2 {
+       grid-area: 4/1/span 1/span 6;
+    }
+    .para2 p{
+        font-size: 1.5rem;
+        margin: 10px;
+        padding-left: 10px;
+    }
+    .fig1 {
+        grid-area: 6/2/span 1/span 1;
+        transition: transform 0.5s ease;
+    }
+    .fig1:hover, .fig2:hover, .fig3:hover, .fig4:hover{
+        transform: scale(1.4);
+    }
+    .fig1:hover img, .fig2:hover img, .fig3:hover img, .fig4:hover img{
+        padding: 0;
+    }
+    .fig2 {
+        grid-area: 6/3/span 1/span 1;
+        transition: transform 0.5s ease;
+    }
+    .fig3 {
+        grid-area: 6/4/span 1/span 1;
+        transition: transform 0.5s ease;
+    }
+    .fig4 {
+        grid-area: 6/5/span 1/span 1;
+        transition: transform 0.5s ease;
+    }
+
+    .fig1 img, .fig2 img, .fig3 img, .fig4 img{
+        height: 100%;
+        width: 100%;
+        
+    }
+
+    .main-ul {
+        grid-area: 2/3/span 2/span 2;
+        border: 5px dotted #000000;
+        padding: 20px;
+        display: inline-block;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+        width: 80%;
+        height: 90%;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 20px;
+        background-color: #84a59d;
+    }
+    .main-ul h3 {
+        margin-bottom: 15px; 
+        padding: 0;
+    }
+
+    .main-ul ul { 
+        padding-left: 50px; 
+        padding-top: 5px; 
+        padding-bottom: 5px;
+    }
+
+    .main-ul ul li {
+        font-size: 1.5rem; 
+       
+    }
+}
+
+
+/* grid for recipe page */
+
+.grid-container-1{
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+    padding: 10%;
+    margin-bottom: 30%;
+}
+
+.recipe-h2{
+    grid-column: 1 / -1;
+}
+
+.recipe-img{
+    grid-column: 1 / span 1;
+    height: 100%;
+    width: auto;
+}
+
+.recipe-ingredients{
+    grid-column: 1 / -1;
+    border: 5px dotted #000000;
+    display: inline-block;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+    width: 100%; 
+    height: 100%;
+    /* margin: 10%; */
+    background-color: #84a59d;
+    
+}
+
+.recipe-ingredients h3{
+    color: #4a4a4a; 
+    font-size: 1.6em; 
+    padding-top: 10%; 
+    text-align: center; 
+}
+
+.recipe-ingredients ul {
+    list-style-type: circle; 
+    padding-left: 10%; 
+    padding-top: 5%; 
+    padding-bottom: 5%;
+    text-align: left;
+    width: fit-content;
+}
+
+.recipe-ingredients ul li {
+    color: #333333; 
+    line-height: 1.6; 
+    font-size: 1rem; 
+}
+
+
+.recipe-description{
+    grid-column: 2 / span 1;
+    grid-row-start: 2;
+    width: 100%;
+    
+}
+.recipe-description p{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5%;
+}
+.recipe-steps {
+    grid-column: 1 / -1;
+}
+
+.recipe-steps h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.recipe-steps ul{
+    list-style-type: circle;
+    text-align: left;
+    font-size: 1.1rem;
+}
+.recipe-gallery {
+    grid-column: 1 / -1;
+    margin-bottom: 15%;
+}
+
+.recipe-gallery h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (min-width: 750px){
+    .grid-container-1{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+    .recipe-h2{
+        grid-column: 1 / -1;
+    }
+    .recipe-img{
+        grid-area: 2/1/span 1/span 2;
+    }
+    .recipe-img img{
+        height: 90%;
+        width: 60%;
+        margin-left: 80px;
+        margin-right: 100px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .recipe-ingredients{
+        grid-column: 3 / 5;
+        height: 90%;
+        width: 80%;
+        margin-top: 5%;
+    }
+    .recipe-ingredients h3{
+        color: #4a4a4a; 
+        font-size: 30px; 
+        margin-bottom: 15px; 
+        text-align: center; 
+    }
+
+    .recipe-ingredients ul {
+        list-style-type: circle; 
+        padding-left: 20px; 
+       
+        padding-bottom: 15%;
+        text-align: left;
+        width: fit-content;
+    }
+
+    .recipe-ingredients ul li {
+        color: #333333; 
+        line-height: 1.6; 
+        font-size: 1rem; 
+    }
+   
+    .recipe-description{
+        grid-column: 5 / 7;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .recipe-description p{
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: left;
+        padding: 2%;
+    }
+    
+    .recipe-steps {
+        grid-column: 1/-1;
+    }
+
+    .recipe-steps h3{
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .recipe-steps ul{
+        list-style-type: circle;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 90px;
+        margin-right: 90px;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    
+    .recipe-gallery{
+        grid-column: 1 / -1;
+        margin-top: 20px;
+        margin-bottom: 5%;
+    }
+
+    .recipe-gallery h3{
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+   .recipe-gallery img{
+        width: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+        transition: transform 0.5s ease;
+   }
+   .recipe-gallery img:hover{
+    transform: scale(1.4);
+    padding: 0;
+   }
+}
+
+
+/* grid for travel page */
+.grid-container-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+    padding: 10%;
+}
+
+.travel-h2{
+    grid-column: 1 / -1;
+
+}
+
+.travel-scenery{
+    grid-column: 2 / span 1;
+    border: 5px dotted #000000;
+    display: inline-block;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    margin-left: 10%;
+    background-color: #84a59d;
+}
+.travel-scenery h3{
+    color: #4a4a4a; 
+    font-size: 1.6rem; 
+    margin-top: 10%; 
+    text-align: center; 
+}
+
+.travel-scenery ul{
+    list-style-type: circle;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.travel-scenery ul li{
+    color: #333333; 
+    line-height: 1.8; 
+    font-size: 1.1rem; 
+}
+.travel-p {
+    grid-column: 1 / -1;
+}
+.travel-p p{
+    font-size: 1.1rem;
+    font-weight: 400;
+
+}
+.travel-gallery{
+    grid-column: 1 / -1;
+    margin-bottom: 20%;
+}
+
+@media screen and (min-width: 750px){
+    .grid-container-2{
+        display: grid;
+        width: auto; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .travel-h2{
+        grid-column: 1 / -1;
+    }
+    .travel-h2 h2{
+        text-align: right;
+    }
+    .travel-img{
+        grid-area: 2/1/span 3/span 2;
+    }
+    .travel-img img{
+       height: 60%;
+    }
+
+    .travel-p{
+        grid-area: 3/3/span 1/span 4;
+    }
+    .travel-p p{
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: left;
+        padding-left: 10%;
+    }
+
+    .travel-scenery{
+        grid-area: 4/1/span 2/span 2;
+        height: 50%;
+        width: 80%;
+        margin-top: 40%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .travel-scenery h3{
+        font-size: 30px; 
+        margin-bottom: 15px; 
+        text-align: center; 
+    }
+
+    .travel-scenery ul{
+        padding-left: 40px;
+        padding-right: 80px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .travel-scenery ul li{
+        line-height: 1.6; 
+        font-size: 1.1rem; 
+        text-align: left;
+    }
+    .travel-gallery{
+        grid-area: 4/3/span 2/span 5;
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    .travel-gallery img{
+        width: 30%;
+        margin: 10px;
+        transition: transform 0.5s ease;
+    }
+    .travel-gallery img:hover{
+        transform: scale(1.2);
+        padding: 0;
+    }
+}
+
+/* reduce motion */
+@media screen and (prefers-reduced-motion: reduce) {
+    video {
+    display: none;
+    }
+    img[src$=".gif"]{
+    display: none;
+    } 
+
+}
+
